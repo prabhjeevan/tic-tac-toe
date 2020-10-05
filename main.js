@@ -1,12 +1,14 @@
 /*----- constants -----*/
 let playerOne = 'playerOne'
 let btn = document.getElementById("reset")
+const grid = document.querySelector('.grid')
 /*----- app's state (variables) -----*/
+
 let turn = -1
 let board = [ 
-    [0, 0, 0],
-    [0, 0, 0],
-    [0, 0, 0]
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
 ]
 
 /*----- cached element references -----*/
@@ -19,16 +21,6 @@ btn.addEventListener('click', reset)
 
 /*----- functions -----*/
 
-
-// function init() {
-//     turn = -1
-//     board = [
-//         [0, 0, 0],
-//         [0, 0, 0],
-//         [0, 0, 0]
-//     ]
-
-// }
 function render() {
 
     board.forEach((box, idx) =>  {
@@ -39,7 +31,7 @@ function render() {
             document.getElementById(idx).textContent = 'X'
         }
     })
-
+document.getElementById('reset').onclick = function() {reset()} ;
 }
 
 function newTurn(e) {
@@ -53,13 +45,7 @@ function newTurn(e) {
 }
 
 function reset(e) { 
-    for (i = 0; i < grid.length; i++) {
-      grid[e].textContent = ""
-    }
-    turn = -1;
-    board = [
-        [0, 0, 0],
-        [0, 0, 0],
-        [0, 0, 0]
-    ];
+  console.log('clicked')
+  btn.onclick.document.querySelector('.box').innerHTML = "" 
+  
 }
