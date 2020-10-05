@@ -1,7 +1,7 @@
 /*----- constants -----*/
 let btn = document.getElementById("reset")
 let sound = document.getElementById("sound")
-let bgCheckbox = document.querySelector('input[type="checkbox"]');
+
 
 /*----- app's state (variables) -----*/
 let turn = -1
@@ -20,7 +20,7 @@ const grid = document.querySelector('.grid')
 /*----- event listeners -----*/
 grid.addEventListener('click', newTurn)
 btn.addEventListener('click', reset)
-bgCheckbox.addEventListener('change', playSound);
+
 /*----- functions -----*/
 
 function render() {
@@ -58,7 +58,12 @@ function reset(e) {
   document.getElementById("7").innerHTML = "" 
   document.getElementById("8").innerHTML = "" 
   document.getElementById("9").innerHTML = ""   
-  let turn = -1
+  board = [ 
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+]
+ 
 }
 
 
