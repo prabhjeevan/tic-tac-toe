@@ -15,7 +15,7 @@ const grid = document.querySelector('.grid')
 
 /*----- event listeners -----*/
 grid.addEventListener('click', newTurn)
-btn.addEventListener('click', function() { document.querySelectorAll('.box').innerHTML = ""})
+btn.addEventListener('click', reset)
 
 /*----- functions -----*/
 
@@ -29,7 +29,6 @@ function render() {
             document.getElementById(idx).textContent = 'X'
         }
     })
-document.getElementById('reset').onclick = function() {reset()} ;
 }
 
 function newTurn(e) {
@@ -44,6 +43,13 @@ function newTurn(e) {
 
 function reset(e) { 
   console.log('clicked')
-  btn.onclick.document.querySelector('.box').innerHTML = "" 
-  
+  document.getElementById("1").innerHTML = "" 
+  document.getElementById("2").innerHTML = "" 
+  document.getElementById("3").innerHTML = ""
+  document.getElementById("4").innerHTML = "" 
+  document.getElementById("5").innerHTML = ""
+  document.getElementById("6").innerHTML = "" 
+  document.getElementById("7").innerHTML = "" 
+  document.getElementById("8").innerHTML = "" 
+  document.getElementById("9").innerHTML = ""   
 }
