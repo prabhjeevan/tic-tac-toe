@@ -1,9 +1,7 @@
 /*----- constants -----*/
-let playerOne = 'playerOne'
 let btn = document.getElementById("reset")
-const grid = document.querySelector('.grid')
-/*----- app's state (variables) -----*/
 
+/*----- app's state (variables) -----*/
 let turn = -1
 let board = [ 
     ["", "", ""],
@@ -17,7 +15,7 @@ const grid = document.querySelector('.grid')
 
 /*----- event listeners -----*/
 grid.addEventListener('click', newTurn)
-btn.addEventListener('click', reset)
+btn.addEventListener('click', function() { document.querySelectorAll('.box').innerHTML = ""})
 
 /*----- functions -----*/
 
